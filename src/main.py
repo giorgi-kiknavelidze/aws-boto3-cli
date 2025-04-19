@@ -27,6 +27,10 @@ from organize_bucket_command_handler import organize_bucket_command_handler
 from is_versioning_enabled_command_handler import is_versioning_enabled_command_handler
 from rollback_s3_file_command_handler import rollback_s3_file_command_handler
 from list_object_versions_command_handler import list_object_versions_command_handler
+from organized_upload_file_to_bucket_command_handler import (
+    organized_upload_file_to_bucket_command_handler,
+)
+from delete_old_versions_command_handler import delete_old_versions_command_handler
 
 
 def main() -> None:
@@ -47,6 +51,8 @@ def main() -> None:
     app.add_typer(is_versioning_enabled_command_handler)
     app.add_typer(list_object_versions_command_handler)
     app.add_typer(rollback_s3_file_command_handler)
+    app.add_typer(organized_upload_file_to_bucket_command_handler)
+    app.add_typer(delete_old_versions_command_handler)
 
     try:
         app()
