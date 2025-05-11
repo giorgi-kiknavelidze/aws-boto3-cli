@@ -6,7 +6,7 @@ configure_lifecycle_policy_command_handler = Typer()
 
 
 @configure_lifecycle_policy_command_handler.command()
-def configure_lifecycle_policy(bucket_name) -> None:
+def configure_lifecycle_policy(bucket_name: str) -> None:
     configuration: BucketLifecycleConfigurationTypeDef = {
         "Rules": [
             {

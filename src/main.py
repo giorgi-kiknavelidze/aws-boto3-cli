@@ -31,6 +31,7 @@ from organized_upload_file_to_bucket_command_handler import (
     organized_upload_file_to_bucket_command_handler,
 )
 from delete_old_versions_command_handler import delete_old_versions_command_handler
+from host_static_site_command_handler import host_static_site_command_handler
 
 
 def main() -> None:
@@ -53,6 +54,7 @@ def main() -> None:
     app.add_typer(rollback_s3_file_command_handler)
     app.add_typer(organized_upload_file_to_bucket_command_handler)
     app.add_typer(delete_old_versions_command_handler)
+    app.add_typer(host_static_site_command_handler)
 
     try:
         app()
