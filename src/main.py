@@ -32,6 +32,7 @@ from organized_upload_file_to_bucket_command_handler import (
 )
 from delete_old_versions_command_handler import delete_old_versions_command_handler
 from host_static_site_command_handler import host_static_site_command_handler
+from inspire_command_handler import inspire_command_handler
 
 
 def main() -> None:
@@ -55,6 +56,7 @@ def main() -> None:
     app.add_typer(organized_upload_file_to_bucket_command_handler)
     app.add_typer(delete_old_versions_command_handler)
     app.add_typer(host_static_site_command_handler)
+    app.add_typer(inspire_command_handler)
 
     try:
         app()
